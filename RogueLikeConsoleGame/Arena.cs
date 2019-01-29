@@ -6,6 +6,12 @@ namespace RogueLikeConsoleGame
 {
     class Arena
     {
+        public static int MonsterPositionTop;
+        public static int MonsterPositionLeft;
+
+        public static int ChestPositionTop;
+        public static int ChestPositionLeft;
+
         //Exit();
         public static void CreateArena()
         {
@@ -75,14 +81,13 @@ namespace RogueLikeConsoleGame
             }
 
             // Monster
-
-            Console.CursorTop = 10;
-            Console.CursorLeft = 60;
+            MonsterPositionTop = Console.CursorTop = 10;
+            MonsterPositionLeft = Console.CursorLeft = 60;
             Console.Write("M");
 
             // Chest
-            Console.CursorTop = 18;
-            Console.CursorLeft = 20;
+            ChestPositionTop = Console.CursorTop = 18;
+            ChestPositionLeft = Console.CursorLeft = 20;
             Console.Write("C");
         }
     }

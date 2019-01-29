@@ -6,6 +6,6 @@ namespace RogueLikeConsoleGame
 {
     class Arena
     {
-        Exit()
+        //Exit();
     }
 }

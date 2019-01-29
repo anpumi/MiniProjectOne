@@ -10,17 +10,17 @@ namespace RogueLikeConsoleGame
         public static string Name;
         public static int Damage;
 
-        Moves()
+        /*Moves()
         {
 
-        }
-        Attacks()
+        }*/
+        /*Attacks()
         {
 
-        }
-        Dies()
+        }*/
+        /*Dies()
         {
 
-        }
+        }*/
     }
 }

@@ -10,8 +10,5 @@ namespace RogueLikeConsoleGame
         public static string Name;
         public static int Damage;
         public static int Armor;
-
-        Moves();
-
     }
 }

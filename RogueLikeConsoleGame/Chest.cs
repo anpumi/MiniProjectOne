@@ -6,7 +6,7 @@ namespace RogueLikeConsoleGame
 {
     class Chest
     {
-        Open();
-        DropLoot();
+        //Open();
+        //DropLoot();
     }
 }

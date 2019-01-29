@@ -6,9 +6,10 @@ namespace RogueLikeConsoleGame
     {
         static void Main(string[] args)
         {
-            StartGame();
-            PlayGame();
-            EndGame();
+            //StartGame();
+            //PlayGame();
+            //EndGame();
+            Movement.Move();
         }
     }
 }

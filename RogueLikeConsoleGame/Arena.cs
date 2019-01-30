@@ -4,6 +4,7 @@ using System.Text;
 
 namespace RogueLikeConsoleGame
 {
+    // Annukka Puotiniemi 29/1/2019
     class Arena
     {
         public static int MonsterPositionTop;
@@ -28,9 +29,8 @@ namespace RogueLikeConsoleGame
         //Exit();
         public static void CreateArena()
         {
-            // Annukka Puotiniemi 29/1/2019
-            //Console.WriteLine(x);
-            //Console.WriteLine(y);
+
+            UserInterface.BuildUI();
 
             // Top border
             for (int i = 0; i < x; i++)

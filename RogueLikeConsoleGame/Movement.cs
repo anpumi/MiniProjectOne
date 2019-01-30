@@ -83,6 +83,12 @@ namespace RogueLikeConsoleGame
                 //    //Player.Loot();
                 //}
 
+                if (CurrentPlayerPositionLeft == Arena.ExitPositionLeft && CurrentPlayerPositionTop == Arena.ExitPositionTop)
+                {
+                    EndGame.Exit();
+                    //Player.Loot();
+                }
+
             } while (input.Key != ConsoleKey.Escape);
         }
     }

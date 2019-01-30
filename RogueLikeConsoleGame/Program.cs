@@ -10,6 +10,7 @@ namespace RogueLikeConsoleGame
 
             Console.WriteLine("Please enter Player name: ");
             string name1 = Console.ReadLine();
+            Console.Clear();
             string name2 = "MonsteriPelle";
 
             Player killer = new Player(name1,100,20,10);
@@ -17,7 +18,7 @@ namespace RogueLikeConsoleGame
 
 
             
-            Monster enemy = new Monster(name2, 40, 20, 10);
+            Monster enemy = new Monster(name2, 40, 40, 10);
 
 
 
@@ -28,7 +29,8 @@ namespace RogueLikeConsoleGame
 
             //Console.ReadLine();
             //Console.Clear();
-/*            Battle.StartFight(killer,enemy)*/;
+            ////Battle.StartFight(killer, enemy);
+            //Battle.GetAttackResult(killer, enemy);
             //Console.Clear();
             //StartGame();
             //PlayGame();

@@ -106,7 +106,7 @@ namespace RogueLikeConsoleGame
 
         public int Attack()
         {
-            return rnd.Next(1, (int)damagePoints);
+            return rnd.Next(10, (int)damagePoints);
         }
 
 

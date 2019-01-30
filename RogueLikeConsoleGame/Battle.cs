@@ -11,17 +11,19 @@ namespace RogueLikeConsoleGame
         {
             while (true)
             {
-                if (GetAttackResult(pelaaja, monsteri) == "Game over")
-                {
-                    Console.WriteLine("GAME LOST HAHAAHAH");
-                    break;
-                }
-
+                //if(GetAttackResult(pelaaja,monsteri)=="Game over")
+                //{
+                //    Console.WriteLine("Game lost");
+                //    break;
+                //}
             }
+
+            
         }
 
 
-        public static string GetAttackResult(Player playerA, Monster monsterB)
+        //public static string GetAttackResult(Player playerA, Monster monsterB)
+        public static void GetAttackResult(Player playerA, Monster monsterB)
         {
             //PLayer spesification
             int warAttack = playerA.Attack();
@@ -67,18 +69,24 @@ namespace RogueLikeConsoleGame
 
 
 
-            if (monsterB.HealthPoints <= 0)
+            if (monsterB.HealthPoints <=0)
             {
                 Console.WriteLine("{0} has DIED and {1} is Bestofthebest\n", monsterB.Name, playerA.Name);
-                return "Game over";
+                //return "Game over";
             }
-            else
+            //else
+            //{
+            //    return " ";
+            //}
+            if (playerA.HealthPoints<=0)
             {
-                return "Fight again";
+                EndGame.GameOver();
             }
+           
         }
     }
 }
+
 
 
         

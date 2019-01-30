@@ -28,28 +28,32 @@ namespace RogueLikeConsoleGame
 
             int warDefence = monsterB.Defence();
 
-            int warIsHellB = warDefence - warAttack;
+            int warIsHellB = -warDefence + warAttack;
 
             if (warIsHellB > 0)
             {
                 monsterB.HealthPoints = monsterB.HealthPoints - warIsHellB;
             }
+            else
+            {
+                warIsHellB = 0;
+            }
 
             //Monster spesification
             int warAttack2 = monsterB.Attack();
             int warDefence2 = playerA.Defence();
-            int warisHellA = warDefence2-warAttack2;
+            int warisHellA = -warDefence2+warAttack2;
 
             if (warisHellA > 0)
             {
                 playerA.HealthPoints = playerA.HealthPoints - warisHellA;
             }
-            //else
-            //{
-            //    warisHellA = 0;
-            //}
+            else
+            {
+                warisHellA = 0;
+            }
 
-            
+
 
             Console.ReadLine();
 

@@ -6,15 +6,15 @@ namespace RogueLikeConsoleGame
 {
     class UserInterface
     {
-        
-        public void BuildUI()
+        // Annukka Puotiniemi 30.1.2019
+        public static void BuildUI()
         {
             for (int i = 0; i < Console.WindowWidth; i++)
             {
                 Console.Write("*");
             }
-            Console.WriteLine("Player name: " + Characters.Player.name);
-            Console.WriteLine("HP: " + Characters.Player.healthPoints);
+            Console.WriteLine("Player name: " + Player.name);
+            Console.WriteLine("HP: " + Player.healthPoints);
             Console.WriteLine();
             for (int i = 0; i < Console.WindowWidth; i++)
             {

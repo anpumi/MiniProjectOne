@@ -12,6 +12,9 @@ namespace RogueLikeConsoleGame
         public static int ChestPositionTop;
         public static int ChestPositionLeft;
 
+        public static int ExitPositionTop;
+        public static int ExitPositionLeft;
+
         public const char wallElement = '#';
 
         public static int x = Console.WindowWidth;
@@ -110,6 +113,11 @@ namespace RogueLikeConsoleGame
             ChestPositionLeft = Console.CursorLeft = 20;
             ChestPositionTop = Console.CursorTop = 18;
             Console.Write("C");
+
+            // Exit
+            ExitPositionLeft = Console.CursorLeft = 3;
+            ExitPositionTop = Console.CursorTop = 27;
+            Console.Write("%");
 
 
         }

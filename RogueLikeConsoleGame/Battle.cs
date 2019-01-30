@@ -4,9 +4,12 @@ using System.Text;
 
 namespace RogueLikeConsoleGame
 {
-    class Weapon
+    class Battle
     {
-        public static string WeaponName;
-        public static int Damage;
+
+
+
+
+
     }
 }

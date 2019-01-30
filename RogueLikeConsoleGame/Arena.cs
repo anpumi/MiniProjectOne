@@ -12,83 +12,114 @@ namespace RogueLikeConsoleGame
         public static int ChestPositionTop;
         public static int ChestPositionLeft;
 
+        public const char wallElement = '#';
+
+        public static int x = Console.WindowWidth;
+        public static int y = Console.WindowHeight;
+        public static int[,] wallElements = new int[x, y];
+
+        public static bool IsWall(int x, int y)
+        {
+            return wallElements[x, y] != '\0';
+        }
         //Exit();
         public static void CreateArena()
         {
             // Annukka Puotiniemi 29/1/2019
+            //Console.WriteLine(x);
+            //Console.WriteLine(y);
+
             // Top border
-            for (int i = 0; i < 120; i++)
+            for (int i = 0; i < x; i++)
             {
-                Console.CursorTop = 0;
                 Console.CursorLeft = i;
-                Console.Write("#");
+                Console.CursorTop = 6;
+                Console.Write(wallElement);
+                wallElements[i, 6] = '#';
             }
 
             // Bottom border
-            for (int i = 0; i < 120; i++)
+            for (int i = 0; i < x; i++)
             {
-                Console.CursorTop = 29;
                 Console.CursorLeft = i;
-                Console.Write("#");
+                Console.CursorTop = y - 1;
+                Console.Write(wallElement);
+                wallElements[i, y-1] = '#';
             }
 
             // Left border
-            for (int i = 0; i < 30; i++)
+            for (int i = 6; i < y; i++)
             {
-                Console.CursorTop = i;
                 Console.CursorLeft = 0;
-                Console.Write("#");
+                Console.CursorTop = i;
+                Console.Write(wallElement);
+                wallElements[0, i] = '#';
             }
 
             // Right border
-            for (int i = 0; i < 30; i++)
+            for (int i = 6; i < y; i++)
             {
+                Console.CursorLeft = x - 1;
                 Console.CursorTop = i;
-                Console.CursorLeft = 119;
-                Console.Write("#");
+                Console.Write(wallElement);
+                wallElements[x-1, i] = '#';
             }
 
             // wall1
             for (int i = 0; i < 30; i++)
             {
-                Console.CursorTop = 20;
                 Console.CursorLeft = i;
+                Console.CursorTop = y - 10;
                 Console.Write("1");
+                wallElements[i, y-10] = '#';
             }
 
-            // wall2
-            for (int i = 0; i < 10; i++)
+            // wall2 - jatka tästä
+            for (int i = 0; i < 6; i++)
             {
-                Console.CursorTop = i;
                 Console.CursorLeft = 50;
+                Console.CursorTop = i + 6;
                 Console.Write("2");
             }
 
             // wall3
             for (int i = 0; i < 10; i++)
             {
-                Console.CursorTop = i + 20;
                 Console.CursorLeft = 80;
+                Console.CursorTop = i + 20;
                 Console.Write("3");
             }
 
             // wall4
             for (int i = 0; i < 10; i++)
             {
-                Console.CursorTop = i + 10;
                 Console.CursorLeft = 100;
+                Console.CursorTop = i + 10;
                 Console.Write("4");
             }
 
             // Monster
-            MonsterPositionTop = Console.CursorTop = 10;
             MonsterPositionLeft = Console.CursorLeft = 60;
+            MonsterPositionTop = Console.CursorTop = 10;
             Console.Write("M");
 
             // Chest
-            ChestPositionTop = Console.CursorTop = 18;
             ChestPositionLeft = Console.CursorLeft = 20;
+            ChestPositionTop = Console.CursorTop = 18;
             Console.Write("C");
+
+
+        }
+        public static void DumpArena()
+        {
+            for (int y = 0; y <= wallElements.GetUpperBound(1); y++)
+            {
+                for (int x = 0; x <= wallElements.GetUpperBound(0); x++)
+                {
+                    Console.Write((char)wallElements[x,y]);
+                }
+                    Console.WriteLine();
+            }
         }
     }
 }

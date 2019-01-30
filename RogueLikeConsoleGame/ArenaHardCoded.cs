@@ -6,6 +6,6 @@ namespace RogueLikeConsoleGame
 {
     class ArenaHardCoded
     {
-
+        // muutos
     }
 }

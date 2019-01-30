@@ -65,6 +65,7 @@ namespace RogueLikeConsoleGame
                         NewPlayerPositionLeft = CurrentPlayerPositionLeft + 1;
                         break;
                 }
+
                 CurrentPlayerPositionTop = NewPlayerPositionTop;
                 CurrentPlayerPositionLeft = NewPlayerPositionLeft;
 
@@ -86,49 +87,24 @@ namespace RogueLikeConsoleGame
 
                 Console.CursorTop = CurrentPlayerPositionTop;
                 Console.CursorLeft = CurrentPlayerPositionLeft;
+
+
+                bool wall = Arena.IsWall(CurrentPlayerPositionLeft, CurrentPlayerPositionTop);
+
+                if (CurrentPlayerPositionTop == 1 || CurrentPlayerPositionTop == Console.WindowHeight-2)
+                {
+                    CurrentPlayerPositionTop = OldPlayerPositionTop;
+                }
+                if (CurrentPlayerPositionLeft == 1 || CurrentPlayerPositionLeft == Console.WindowWidth - 2)
+                {
+                    CurrentPlayerPositionLeft = OldPlayerPositionLeft;
+                }
                 Console.Write("@");
+
 
             } while (input.Key != ConsoleKey.Escape);
 
-            /*do
-            {
-                input = Console.ReadKey();
-                OldPlayerPositionTop = CurrentPlayerPositionTop;
-                OldPlayerPositionLeft = CurrentPlayerPositionLeft;
-                switch (input.Key)
-                {
-                    case ConsoleKey.UpArrow: // move.Y -= 1;
-                        NewPlayerPositionTop = CurrentPlayerPositionTop - 1;
-                        NewPlayerPositionLeft = CurrentPlayerPositionLeft;
-                        break;
-
-                    case ConsoleKey.LeftArrow: // move.X -= 1;
-                        NewPlayerPositionTop = CurrentPlayerPositionTop;
-                        NewPlayerPositionLeft = CurrentPlayerPositionLeft - 1;
-                        break;
-
-                    case ConsoleKey.DownArrow: // move.Y += 1;
-                        NewPlayerPositionTop = CurrentPlayerPositionTop + 1;
-                        NewPlayerPositionLeft = CurrentPlayerPositionLeft;
-                        break;
-
-                    case ConsoleKey.RightArrow: // move.X += 1;
-                        NewPlayerPositionTop = CurrentPlayerPositionTop;
-                        NewPlayerPositionLeft = CurrentPlayerPositionLeft + 1;
-                        break;
-                }
-                CurrentPlayerPositionTop = NewPlayerPositionTop;
-                CurrentPlayerPositionLeft = NewPlayerPositionLeft;
-
-                Console.CursorTop = OldPlayerPositionTop;
-                Console.CursorLeft = OldPlayerPositionLeft;
-                Console.Write(" ");
-
-                Console.CursorTop = CurrentPlayerPositionTop;
-                Console.CursorLeft = CurrentPlayerPositionLeft;
-                Console.Write("@");
-
-            } while (input.Key != ConsoleKey.Escape);*/
+            
         }
     }
 }

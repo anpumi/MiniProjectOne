@@ -72,16 +72,23 @@ namespace RogueLikeConsoleGame
                     Console.Write("\b");
                 }
 
-                //if (CurrentPlayerPositionLeft == Arena.MonsterPositionLeft && CurrentPlayerPositionTop == Arena.MonsterPositionTop)
-                //{
-                //    Console.WriteLine("Wololoo!");
-                //    //Player.Attack();
-                //}
-                //if (CurrentPlayerPositionLeft == Arena.ChestPositionLeft && CurrentPlayerPositionTop == Arena.ChestPositionTop)
-                //{
-                //    Console.WriteLine("HeiHei");
-                //    //Player.Loot();
-                //}
+                if (CurrentPlayerPositionLeft == Arena.MonsterPositionLeft && CurrentPlayerPositionTop == Arena.MonsterPositionTop)
+                {
+                    //Battle.StartFight(killer, enemy);
+                    //Console.WriteLine("Wololoo!");
+                    //Player.Attack();
+                }
+                if (CurrentPlayerPositionLeft == Arena.ChestPositionLeft && CurrentPlayerPositionTop == Arena.ChestPositionTop)
+                {
+                    Chest.DropLoot();
+                    //Player.Loot();
+                }
+
+                if (CurrentPlayerPositionLeft == Arena.ExitPositionLeft && CurrentPlayerPositionTop == Arena.ExitPositionTop)
+                {
+                    EndGame.Exit();
+                    //Player.Loot();
+                }
 
             } while (input.Key != ConsoleKey.Escape);
         }

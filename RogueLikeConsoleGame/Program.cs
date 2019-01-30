@@ -1,5 +1,5 @@
 ﻿using System;
-using Characters;
+
 
 namespace RogueLikeConsoleGame
 {
@@ -7,11 +7,12 @@ namespace RogueLikeConsoleGame
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Please enter Player name: ");
             string name1 = Console.ReadLine();
             string name2 = "MonsteriPelle";
 
-            Player killer = new Player(name1, 100, 20, 15);
+            Player killer = new Player(name1,100,20,10);
             //killer.Health += 10;
 
             Monster enemy = new Monster(name2, 40, 40, 20);
@@ -24,6 +25,8 @@ namespace RogueLikeConsoleGame
             Console.WriteLine($"Healthpisteet ovat {killer.HealthPoints}");
 
             Console.ReadLine();
+            Console.Clear();
+            Battle.StartFight(killer,enemy);
             Console.Clear();
             //StartGame();
             //PlayGame();

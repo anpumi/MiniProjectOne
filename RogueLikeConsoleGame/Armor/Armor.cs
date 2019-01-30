@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RogueLikeConsoleGame.Armor
+namespace RogueLikeConsoleGame
 {
     public class Armor
     {

@@ -17,13 +17,14 @@ namespace RogueLikeConsoleGame
             CurrentPlayerPositionTop = Console.CursorTop = 10;
             CurrentPlayerPositionLeft = Console.CursorLeft = 20;
             Console.Write("@");
+            Console.Write("\b");
         }
-        
+
         public static void Move()
         {
-            Console.CursorVisible = false;
-            StartPosition();
+            //Console.CursorVisible = false;
             Arena.CreateArena();
+            StartPosition();
             var input = Console.ReadKey();
             do
             {
@@ -55,6 +56,7 @@ namespace RogueLikeConsoleGame
 
                 if (wall)
                 {
+                    Console.Write("\b");
                     continue;
                 }
                 if (!wall)
@@ -67,7 +69,20 @@ namespace RogueLikeConsoleGame
                     Console.CursorTop = CurrentPlayerPositionTop;
                     Console.CursorLeft = CurrentPlayerPositionLeft;
                     Console.Write("@");
+                    Console.Write("\b");
                 }
+
+                //if (CurrentPlayerPositionLeft == Arena.MonsterPositionLeft && CurrentPlayerPositionTop == Arena.MonsterPositionTop)
+                //{
+                //    Console.WriteLine("Wololoo!");
+                //    //Player.Attack();
+                //}
+                //if (CurrentPlayerPositionLeft == Arena.ChestPositionLeft && CurrentPlayerPositionTop == Arena.ChestPositionTop)
+                //{
+                //    Console.WriteLine("HeiHei");
+                //    //Player.Loot();
+                //}
+
             } while (input.Key != ConsoleKey.Escape);
         }
     }

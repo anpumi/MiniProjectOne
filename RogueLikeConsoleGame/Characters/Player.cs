@@ -1,12 +1,12 @@
 ﻿
 using RogueLikeConsoleGame;
-using RogueLikeConsoleGame.Armor;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 
-namespace Characters
+namespace RogueLikeConsoleGame
 {
     public class Player
     {
@@ -59,13 +59,9 @@ namespace Characters
             }
             set
             {
-                if (value >= 0 && value <= 100)
                 {
                     this.healthPoints = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "wrong value, the value should be >= 0 and <= 10.");
+           
                 }
 
             }
@@ -99,14 +95,7 @@ namespace Characters
             }
             set
             {
-                if (value >= 0 && value <= 40)
-                {
-                    this.damagePoints = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Wrong value, the value should be >= 0 and <= 10.");
-                }
+            this.damagePoints = value;
 
             }
         }
@@ -125,7 +114,7 @@ namespace Characters
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Wrong value, the value should be >= 0 and <= 10.");
+                    throw new ArgumentOutOfRangeException(string.Empty, "Wrong defencepoints value, the value should be >= 0 and <= 30.");
                 }
 
             }
@@ -138,18 +127,12 @@ namespace Characters
         }
 
 
-        //public void Strike()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-
 
 
 
         Random rnd = new Random();
 
-        public Player(string name = "Pellehermanni", int health = 0, int damage=0, int defend = 0)
+        public Player(string name, int health ,int damage, int defend)
         {
 
             this.Name = name;
@@ -167,6 +150,11 @@ namespace Characters
             return rnd.Next(1, (int)damagePoints);
         }
 
+
+        public int Defence()
+        {
+            return defendPoints;
+        }
 
     }
 }

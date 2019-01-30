@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+// Annukka Puotiniemi 29/1/2019
 
 namespace RogueLikeConsoleGame
 {
@@ -25,7 +26,6 @@ namespace RogueLikeConsoleGame
         //Exit();
         public static void CreateArena()
         {
-            // Annukka Puotiniemi 29/1/2019
             //Console.WriteLine(x);
             //Console.WriteLine(y);
 
@@ -44,7 +44,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = i;
                 Console.CursorTop = y - 1;
                 Console.Write(wallElement);
-                wallElements[i, y-1] = '#';
+                wallElements[i, y - 1] = '#';
             }
 
             // Left border
@@ -62,7 +62,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = x - 1;
                 Console.CursorTop = i;
                 Console.Write(wallElement);
-                wallElements[x-1, i] = '#';
+                wallElements[x - 1, i] = '#';
             }
 
             // wall1
@@ -119,11 +119,10 @@ namespace RogueLikeConsoleGame
             {
                 for (int x = 0; x <= wallElements.GetUpperBound(0); x++)
                 {
-                    Console.Write((char)wallElements[x,y]);
+                    Console.Write((char)wallElements[x, y]);
                 }
-                    Console.WriteLine();
+                Console.WriteLine();
             }
         }
     }
 }
-

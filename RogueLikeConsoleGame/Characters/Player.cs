@@ -14,10 +14,18 @@ namespace RogueLikeConsoleGame
         private Armor bodyArmor;
         private Katana weaponMaster;
 
-        private int healthPoints;
-        private string name;
-        private int damagePoints;
-        private int defendPoints;
+        public static int healthPoints;
+        public static string name;
+        public static int damagePoints;
+        public static int defendPoints;
+
+
+
+        //private int healthPoints;
+        //private string name;
+        //private int damagePoints;
+        //private int defendPoints;
+
 
 
         public static void StartGame()
@@ -55,12 +63,12 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.healthPoints;
+                return healthPoints;
             }
             set
             {
                 {
-                    this.healthPoints = value;
+                    healthPoints = value;
            
                 }
 
@@ -71,13 +79,13 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.name;
+                return name;
             }
             set
             {
                 if (value.Length >= 3)
                 {
-                    this.name = value;
+                    name = value;
                 }
                 else
                 {
@@ -91,11 +99,11 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.damagePoints;
+                return damagePoints;
             }
             set
             {
-            this.damagePoints = value;
+            damagePoints = value;
 
             }
         }
@@ -104,13 +112,13 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.defendPoints;
+                return defendPoints;
             }
             set
             {
                 if (value >= 0 && value <= 20)
                 {
-                    this.defendPoints = value;
+                    defendPoints = value;
                 }
                 else
                 {
@@ -126,7 +134,7 @@ namespace RogueLikeConsoleGame
 
         }
 
-
+   
 
 
 
@@ -135,10 +143,10 @@ namespace RogueLikeConsoleGame
         public Player(string name, int health ,int damage, int defend)
         {
 
-            this.Name = name;
-            this.healthPoints = health;
-            this.damagePoints = damage;
-            this.defendPoints = defend;
+            Name = name;
+            healthPoints = health;
+            damagePoints = damage;
+            defendPoints = defend;
             this.WeaponMaster = new Katana();
             this.BodyArmor = new Armor();
         }

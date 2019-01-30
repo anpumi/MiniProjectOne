@@ -5,7 +5,7 @@ namespace RogueLikeConsoleGame
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
             Console.WriteLine("Please enter Player name: ");
@@ -13,9 +13,11 @@ namespace RogueLikeConsoleGame
             string name2 = "MonsteriPelle";
 
             Player killer = new Player(name1,100,20,10);
-            //killer.Health += 10;
 
-            Monster enemy = new Monster(name2, 40, 40, 20);
+
+
+            //
+            Monster enemy = new Monster(name2, 40, 20, 20);
 
 
 
@@ -31,7 +33,7 @@ namespace RogueLikeConsoleGame
             //StartGame();
             //PlayGame();
             //EndGame();
-            Movement.Move();
+            //Movement.Move();
         }
     }
 }

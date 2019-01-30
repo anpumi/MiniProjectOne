@@ -8,10 +8,10 @@ namespace RogueLikeConsoleGame
     {
 
 
-        private int healthPoints;
-        private string name;
-        private int damagePoints;
-        private int defendPoints;
+        public static int healthPoints;
+        public static string name;
+        public static int damagePoints;
+        public static int defendPoints;
 
 
         public static void StartGame()
@@ -24,13 +24,13 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.healthPoints;
+                return healthPoints;
             }
             set
             {
        
                 {
-                    this.healthPoints = value;
+                    healthPoints = value;
                 }
           
             }
@@ -40,13 +40,13 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.name;
+                return name;
             }
             set
             {
 
                 {
-                    this.name = value;
+                    name = value;
                 }
 
             }
@@ -56,11 +56,11 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.damagePoints;
+                return damagePoints;
             }
             set
             {
-                    this.damagePoints = value;
+                    damagePoints = value;
         
                 }
 
@@ -71,13 +71,13 @@ namespace RogueLikeConsoleGame
         {
             get
             {
-                return this.defendPoints;
+                return defendPoints;
             }
             set
             {
 
                 {
-                    this.defendPoints = value;
+                    defendPoints = value;
                 }
 
             }
@@ -96,20 +96,21 @@ namespace RogueLikeConsoleGame
         public Monster(string name, int health, int damage, int defend)
         {
 
-            this.Name = name;
-            this.healthPoints = health;
-            this.damagePoints = damage;
-            this.defendPoints = defend;
+            Name = name;
+           healthPoints = health;
+           damagePoints = damage;
+           defendPoints = defend;
         }
 
-        // Generate random attack value for Player "pellehermanni";
+        // Generate random attack value for Player "Monster";
 
         public int Attack()
         {
             return rnd.Next(1, (int)damagePoints);
         }
 
-        
+
+
         public int Defence()
         {
             return defendPoints;

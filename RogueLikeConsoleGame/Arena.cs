@@ -71,7 +71,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = i;
                 Console.CursorTop = y - 10;
                 Console.Write("1");
-                wallElements[i, y-10] = '#';
+                wallElements[i, y - 10] = '1';
             }
 
             // wall2 - jatka tästä
@@ -80,6 +80,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = 50;
                 Console.CursorTop = i + 6;
                 Console.Write("2");
+                wallElements[50, i + 6] = '2';
             }
 
             // wall3
@@ -88,6 +89,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = 80;
                 Console.CursorTop = i + 20;
                 Console.Write("3");
+                wallElements[80, i + 20] = '3';
             }
 
             // wall4
@@ -96,6 +98,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = 100;
                 Console.CursorTop = i + 10;
                 Console.Write("4");
+                wallElements[100, i + 10] = '4';
             }
 
             // Monster

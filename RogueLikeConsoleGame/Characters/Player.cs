@@ -8,7 +8,7 @@ using System.Text;
 
 namespace RogueLikeConsoleGame
 {
-    public class Player
+    public class Player // Asko Pakkala
     {
         private Armor bodyArmor;
         private Katana weaponMaster;

@@ -6,7 +6,7 @@ namespace RogueLikeConsoleGame
 {
     class UserInterface
     {
-        // Annukka Puotiniemi 30.1.2019
+        // Annukka Puotiniemi
         public static string CurrentWeapon = "Dagger";
         public static int CurrentWeaponDmg = 10;
         public static string CurrentArmor = "None";

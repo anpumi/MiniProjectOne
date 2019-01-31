@@ -12,20 +12,11 @@ namespace RogueLikeConsoleGame
         {
             Random randomLoot = new Random();
             int loot = randomLoot.Next(0, 6);
-            switch (loot) // Player damage or defence or health rises
+            switch (loot) // Player gains damage, defence or health randomly // If player already has the item, gives +10 health instead
             {
                 case 0: // Player damage = 20
-                    if (Player.damagePoints > 20)
+                    if (Player.damagePoints >= 20)
                     {
-                        //if (Player.healthPoints >= 100)
-                        //{
-
-                        //}
-
-                        //else
-                        //{
-                        //    Player.healthPoints += 10;
-                        //}
                         Player.healthPoints += 10;
                     }
                     else
@@ -37,17 +28,8 @@ namespace RogueLikeConsoleGame
                     break;
 
                 case 1: // Player damage = 30
-                    if (Player.damagePoints > 30)
+                    if (Player.damagePoints >= 30)
                     {
-                        //if (Player.healthPoints >= 100)
-                        //{
-
-                        //}
-
-                        //else
-                        //{
-                        //    Player.healthPoints += 10;
-                        //}
                         Player.healthPoints += 10;
                     }
                     else
@@ -59,17 +41,8 @@ namespace RogueLikeConsoleGame
                     break;
 
                 case 2: // Player damage = 40
-                    if (Player.damagePoints > 40)
+                    if (Player.damagePoints >= 40)
                     {
-                        //if (Player.healthPoints >= 100)
-                        //{
-
-                        //}
-
-                        //else
-                        //{
-                        //    Player.healthPoints += 10;
-                        //}
                         Player.healthPoints += 10;
                     }
                     else
@@ -81,17 +54,8 @@ namespace RogueLikeConsoleGame
                     break;
 
                 case 3: // Player defence = 5 // Before 10
-                    if (Player.defendPoints > 5)
+                    if (Player.defendPoints >= 5)
                     {
-                        //if (Player.healthPoints >= 100)
-                        //{
-
-                        //}
-
-                        //else
-                        //{
-                        //    Player.healthPoints += 10;
-                        //}
                         Player.healthPoints += 10;
                     }
                     else
@@ -103,17 +67,8 @@ namespace RogueLikeConsoleGame
                     break;
 
                 case 4: // Player defence = 10 // Before 15
-                    if (Player.defendPoints > 10)
+                    if (Player.defendPoints >= 10)
                     {
-                        //if (Player.healthPoints >= 100)
-                        //{
-
-                        //}
-
-                        //else
-                        //{
-                        //    Player.healthPoints += 10;
-                        //}
                         Player.healthPoints += 10;
                     }
                     else
@@ -125,17 +80,8 @@ namespace RogueLikeConsoleGame
                     break;
 
                 case 5: // Player defence = 15 // Before 20
-                    if (Player.defendPoints > 15)
+                    if (Player.defendPoints >= 15)
                     {
-                        //if (Player.healthPoints >= 100)
-                        //{
-
-                        //}
-
-                        //else
-                        //{
-                        //    Player.healthPoints += 10;
-                        //}
                         Player.healthPoints += 10;
                     }
                     else
@@ -146,17 +92,8 @@ namespace RogueLikeConsoleGame
                     }
                     break;
 
-                case 6: // Player health + 40
+                case 6: // Player health + 50
                     Player.healthPoints += 50;
-                    //if (Player.healthPoints >= 100)
-                    //{
-
-                    //}
-
-                    //else
-                    //{
-                    //    Player.healthPoints += 40;
-                    //}
                     break;
             }
             UserInterface.BuildUI();

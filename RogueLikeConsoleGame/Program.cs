@@ -9,9 +9,6 @@ namespace RogueLikeConsoleGame
         {
             Player killer = StartGame.Start();
             Movement.PlayGame(killer);
-            
-            //Battle.StartFight(killer, enemy);
-            //Battle.GetAttackResult(killer, enemy);
         }
     }
 }

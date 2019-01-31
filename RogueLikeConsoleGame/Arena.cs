@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RogueLikeConsoleGame
 {
-    // Annukka Puotiniemi 29/1/2019
+    // Annukka Puotiniemi
     class Arena
     {
         // MONSTER elements and bool

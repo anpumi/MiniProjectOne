@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RogueLikeConsoleGame
 {
-    class Monster
+    class Monster // Asko Pakkala
     {
         public static int healthPoints;
        // public static string name;

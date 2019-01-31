@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RogueLikeConsoleGame
 {
-    class StartGame // Asko Pakkala / Timo Lehtikallio
+    class StartGame // Asko Pakkala / Timo Lehtikallio / Annukka Puotiniemi
     {
         public static Player Start()
         {
@@ -35,7 +35,6 @@ namespace RogueLikeConsoleGame
             //Console.WriteLine();
 
             Console.Clear();
-            //string name2 = "MonsteriPelle";
             Player killer = new Player(name1, 100, 10, 0);
             
             return killer;

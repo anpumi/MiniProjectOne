@@ -4,7 +4,7 @@ using System.Text;
 using System.Drawing;
 namespace RogueLikeConsoleGame
 {
-    public class Movement // Timo Lehtikallio 29/1/2019
+    public class Movement // Timo Lehtikallio
     {
         public static int CurrentPlayerPositionTop;
         public static int CurrentPlayerPositionLeft;
@@ -42,7 +42,7 @@ namespace RogueLikeConsoleGame
                 OldPlayerPositionTop = CurrentPlayerPositionTop;
                 OldPlayerPositionLeft = CurrentPlayerPositionLeft;
 
-                switch (input.Key)
+                switch (input.Key) // Move player
                 {
                     case ConsoleKey.UpArrow: // move.Y -= 1;
                         NewPlayerPositionTop = CurrentPlayerPositionTop - 1;
@@ -83,6 +83,7 @@ namespace RogueLikeConsoleGame
                     Console.Write("\b");
                 }
 
+                // Starts battle if player over monster
                 if (Arena.IsMonster(NewPlayerPositionLeft,NewPlayerPositionTop))
                 {
                     Battle.GetAttackResult(killer, enemy);
@@ -101,12 +102,14 @@ namespace RogueLikeConsoleGame
                 //    Arena.monsterElements3[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
                 //}
 
+                // Player gains buffs if over chest
                 if (Arena.IsChest(NewPlayerPositionLeft, NewPlayerPositionTop))
                 {
                     Chest.DropLoot();
                     Arena.chestElements[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
                 }
 
+                // Player exits arena
                 if (CurrentPlayerPositionLeft == Arena.ExitPositionLeft && CurrentPlayerPositionTop == Arena.ExitPositionTop)
                 {
                     EndGame.Exit();

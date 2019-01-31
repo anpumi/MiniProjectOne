@@ -8,7 +8,7 @@ namespace RogueLikeConsoleGame
     {
         public static string input = "";
         
-        public static void Exit()
+        public static void Exit() // Player win
         {
             Console.Clear();
             Console.WriteLine("Good shit bro, you win!");
@@ -36,7 +36,7 @@ namespace RogueLikeConsoleGame
             }
         }
 
-        public static void GameOver()
+        public static void GameOver() // Player lose
         {
             Console.Clear();
             Console.WriteLine("YOU DIED");

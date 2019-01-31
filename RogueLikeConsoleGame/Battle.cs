@@ -7,20 +7,20 @@ namespace RogueLikeConsoleGame
 {
     class Battle
     {
-        public static void StartFight(Player pelaaja, Monster monsteri)
-        {
-            while (true)
-            {
-                //if (GetAttackResult(pelaaja, monsteri) == "Game over")
-                //{
-                //    Console.WriteLine("Game lost");
+        //public static void StartFight(Player pelaaja, Monster monsteri)
+        //{
+        //    while (true)
+        //    {
+        //        //if (GetAttackResult(pelaaja, monsteri) == "Game over")
+        //        //{
+        //        //    Console.WriteLine("Game lost");
 
-                //}
-            }
+        //        //}
+        //    }
 
 
-        }
-
+        //}
+        
 
         //public static string GetAttackResult(Player playerA, Monster monsterB)
         public static void GetAttackResult(Player playerA, Monster monsterB)
@@ -57,7 +57,7 @@ namespace RogueLikeConsoleGame
 
 
 
-            Console.ReadLine();
+           
 
 
             //Console.WriteLine("{0} Attack {1} and deals {2} damage", playerA.Name, /*monsterB.Name, */warIsHellB);

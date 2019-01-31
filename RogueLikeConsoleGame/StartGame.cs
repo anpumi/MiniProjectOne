@@ -8,12 +8,36 @@ namespace RogueLikeConsoleGame
     {
         public static void Start()
         {
-            Console.WriteLine("Please enter Player name: ");
+            for (int i = 0; i < Console.WindowWidth; i++)
+            {
+                Console.Write("-");
+            }
+            Console.WriteLine("Welcome to the Codes of Exploration!");
+            Console.WriteLine();
+            Console.WriteLine("Move around the arena using keyboard arrows. Avoid the monsters, ");
+            Console.WriteLine("open chests to collect loot, and exit the game from % ");
+            Console.WriteLine();
+            Console.WriteLine("@ = player");
+            Console.WriteLine("# = walls");
+            Console.WriteLine("C = chest");
+            Console.WriteLine("M = monster");
+            Console.WriteLine("% = exit");
+            Console.WriteLine();
+            for (int i = 0; i < Console.WindowWidth; i++)
+            {
+                Console.Write("-");
+            }
+            Console.WriteLine("Please enter player name: ");
             string name1 = Console.ReadLine();
+            //Console.WriteLine();
+            //Console.WriteLine("Welcome to the game, " + name1 + ". Let's get started!");
+            //Console.WriteLine("Press enter to continue...");
+            //Console.WriteLine();
+
             Console.Clear();
-            string name2 = "MonsteriPelle";
+            //string name2 = "MonsteriPelle";
             Player killer = new Player(name1, 100, 10, 0);
-            Monster enemy = new Monster(name2, 40, 40, 0);
+            Monster enemy = new Monster(40, 40, 0);
         }
     }
 }

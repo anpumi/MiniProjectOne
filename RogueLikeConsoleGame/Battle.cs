@@ -60,18 +60,18 @@ namespace RogueLikeConsoleGame
             Console.ReadLine();
 
 
-            Console.WriteLine("{0} Attack {1} and deals {2} damage", playerA.Name, monsterB.Name, warIsHellB);
-            Console.WriteLine("{0} has {1} Health \n", monsterB.Name, monsterB.HealthPoints);
+            //Console.WriteLine("{0} Attack {1} and deals {2} damage", playerA.Name, /*monsterB.Name, */warIsHellB);
+            //Console.WriteLine("{0} has {1} Health \n", monsterB.Name, monsterB.HealthPoints);
 
-            Console.WriteLine("{0} Attack {1} and deals {2} damage", monsterB.Name, playerA.Name, warisHellA);
-            Console.WriteLine("{0} has {1} Health \n", playerA.Name, playerA.HealthPoints);
+            //Console.WriteLine("{0} Attack {1} and deals {2} damage", monsterB.Name, playerA.Name, warisHellA);
+            //Console.WriteLine("{0} has {1} Health \n", playerA.Name, playerA.HealthPoints);
 
 
 
 
             if (monsterB.HealthPoints <=0)
             {
-                Console.WriteLine("{0} has DIED and {1} is Bestofthebest\n", monsterB.Name, playerA.Name);
+                //Console.WriteLine("{0} has DIED and {1} is Bestofthebest\n", monsterB.Name, playerA.Name);
                 //return "Game over";
             }
             //else

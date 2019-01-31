@@ -8,7 +8,7 @@ namespace RogueLikeConsoleGame
     {
 
         public static int healthPoints;
-        public static string name;
+       // public static string name;
         public static int damagePoints;
         public static int defendPoints;
 
@@ -35,21 +35,21 @@ namespace RogueLikeConsoleGame
             }
         }
 
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
+        //public string Name
+        //{
+        //    get
+        //    {
+        //        return name;
+        //    }
+        //    set
+        //    {
 
-                {
-                    name = value;
-                }
+        //        {
+        //            name = value;
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
         public int DamagePoints
         {
@@ -90,10 +90,10 @@ namespace RogueLikeConsoleGame
 
         Random rnd = new Random();
 
-        public Monster(string name, int health, int damage, int defend)
+        public Monster(int health, int damage, int defend)
         {
 
-            Name = name;
+            //Name = name;
            healthPoints = health;
            damagePoints = damage;
            defendPoints = defend;

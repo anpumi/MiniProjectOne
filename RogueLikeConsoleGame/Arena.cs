@@ -113,13 +113,13 @@ namespace RogueLikeConsoleGame
                 Console.CursorTop = i + 10;
                 //Console.WriteLine("3333333");
                 Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
-                wallElements[46, i + 6] = wallElement;
-                wallElements[47, i + 6] = wallElement;
-                wallElements[48, i + 6] = wallElement;
-                wallElements[49, i + 6] = wallElement;
-                wallElements[50, i+6] = wallElement;
-                wallElements[51, i+6] = wallElement;
-                wallElements[52, i+6] = wallElement;
+                wallElements[46, i + 10] = wallElement;
+                wallElements[47, i + 10] = wallElement;
+                wallElements[48, i + 10] = wallElement;
+                wallElements[49, i + 10] = wallElement;
+                wallElements[50, i+10] = wallElement;
+                wallElements[51, i+10] = wallElement;
+                wallElements[52, i+10] = wallElement;
             }
             // wall4
             for (int i = 0; i < 18; i++)

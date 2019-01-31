@@ -119,7 +119,23 @@ namespace RogueLikeConsoleGame
             // Monster
             MonsterPositionLeft = Console.CursorLeft = 60;
             MonsterPositionTop = Console.CursorTop = 10;
-            Console.Write("M");
+            Console.Write(monsterElement);
+
+            //MonsterPositionLeft = Console.CursorLeft = 60;
+            //MonsterPositionTop = Console.CursorTop = 10;
+            //Console.Write(monsterElement);
+
+            //MonsterPositionLeft = Console.CursorLeft = 160;
+            //MonsterPositionTop = Console.CursorTop = 10;
+            //Console.Write(monsterElement);
+
+            //MonsterPositionLeft = Console.CursorLeft = 60;
+            //MonsterPositionTop = Console.CursorTop = 10;
+            //Console.Write(monsterElement);
+
+            //MonsterPositionLeft = Console.CursorLeft = 60;
+            //MonsterPositionTop = Console.CursorTop = 10;
+            //Console.Write(monsterElement);
 
             // Chest
             ChestPositionLeft = Console.CursorLeft = 20;

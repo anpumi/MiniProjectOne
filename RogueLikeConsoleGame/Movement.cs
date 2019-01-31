@@ -57,6 +57,7 @@ namespace RogueLikeConsoleGame
                         break;
                 }
 
+                // Prevents walking through walls
                 bool wall = Arena.IsWall(NewPlayerPositionLeft, NewPlayerPositionTop);
 
                 if (wall)

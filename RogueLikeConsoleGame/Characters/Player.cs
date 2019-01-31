@@ -47,7 +47,7 @@ namespace RogueLikeConsoleGame
             }
         }
 
-
+        
         public int HealthPoints
         {
             get
@@ -57,7 +57,15 @@ namespace RogueLikeConsoleGame
             set
             {
                 {
-                    healthPoints = value;
+                    if (healthPoints > 100)
+                    {
+                        healthPoints = 100;
+                    }
+                    else
+                    {
+
+                        healthPoints = value;
+                    }
                 }
 
             }

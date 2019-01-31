@@ -17,7 +17,15 @@ namespace RogueLikeConsoleGame
                 case 0: // Player damage = 20
                     if (Player.damagePoints > 20)
                     {
-                        Player.healthPoints += 10;
+                        if (Player.healthPoints >= 100)
+                        {
+
+                        }
+
+                        else
+                        {
+                            Player.healthPoints += 10;
+                        }
                     }
                     else
                     {
@@ -31,7 +39,15 @@ namespace RogueLikeConsoleGame
                 case 1: // Player damage = 30
                     if (Player.damagePoints > 30)
                     {
-                        Player.healthPoints += 10;
+                        if (Player.healthPoints >= 100)
+                        {
+
+                        }
+
+                        else
+                        {
+                            Player.healthPoints += 10;
+                        }
                     }
                     else
                     {
@@ -45,7 +61,15 @@ namespace RogueLikeConsoleGame
                 case 2: // Player damage = 40
                     if (Player.damagePoints > 40)
                     {
-                        Player.healthPoints += 10;
+                        if (Player.healthPoints >= 100)
+                        {
+
+                        }
+
+                        else
+                        {
+                            Player.healthPoints += 10;
+                        }
                     }
                     else
                     {
@@ -59,7 +83,15 @@ namespace RogueLikeConsoleGame
                 case 3: // Player defence = 10
                     if (Player.defendPoints > 10)
                     {
-                        Player.healthPoints += 10;
+                        if (Player.healthPoints >= 100)
+                        {
+
+                        }
+
+                        else
+                        {
+                            Player.healthPoints += 10;
+                        }
                     }
                     else
                     {
@@ -73,7 +105,15 @@ namespace RogueLikeConsoleGame
                 case 4: // Player defence = 15
                     if (Player.defendPoints > 15)
                     {
-                        Player.healthPoints += 10;
+                        if (Player.healthPoints >= 100)
+                        {
+
+                        }
+
+                        else
+                        {
+                            Player.healthPoints += 10;
+                        }
                     }
                     else
                     {
@@ -87,7 +127,15 @@ namespace RogueLikeConsoleGame
                 case 5: // Player defence = 20
                     if (Player.defendPoints > 20)
                     {
-                        Player.healthPoints += 10;
+                        if (Player.healthPoints >= 100)
+                        {
+
+                        }
+
+                        else
+                        {
+                            Player.healthPoints += 10;
+                        }
                     }
                     else
                     {
@@ -99,7 +147,15 @@ namespace RogueLikeConsoleGame
                     break;
 
                 case 6: // Player health + 40
-                    Player.healthPoints += 40;
+                    if (Player.healthPoints >= 100)
+                    {
+
+                    }
+
+                    else
+                    {
+                        Player.healthPoints += 40;
+                    }
                     break;
             }
         }

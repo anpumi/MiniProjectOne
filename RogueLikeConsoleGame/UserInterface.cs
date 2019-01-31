@@ -11,6 +11,7 @@ namespace RogueLikeConsoleGame
         public static int CurrentWeaponDmg = 10;
         public static string CurrentArmor = "None";
         public static int CurrentArmorDef = 0;
+        public static string Text = "";
 
         public static void BuildUI()
         {
@@ -21,8 +22,7 @@ namespace RogueLikeConsoleGame
                 Console.Write("-");
             }
             Console.WriteLine("Player name: " + Player.name);
-            Console.WriteLine("HP: " + Player.healthPoints);
-            //Console.WriteLine("Weapon: " + Chest.ChestLoot);
+            Console.WriteLine($"HP: {Player.healthPoints} \t\t\t {Text}");
             Console.WriteLine($"Weapon: {CurrentWeapon}, Damage: {CurrentWeaponDmg}");
             Console.WriteLine($"Armor: {CurrentArmor}, Defence: {CurrentArmorDef}");
             //Console.WriteLine();

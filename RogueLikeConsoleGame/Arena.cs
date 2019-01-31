@@ -12,9 +12,20 @@ namespace RogueLikeConsoleGame
         public static int MonsterPositionTop;
         public static int MonsterPositionLeft;
         public static int[,] monsterElements = new int[Console.WindowWidth, Console.WindowHeight];
+        public static int[,] monsterElements2 = new int[Console.WindowWidth, Console.WindowHeight];
+        public static int[,] monsterElements3 = new int[Console.WindowWidth, Console.WindowHeight];
+
         public static bool IsMonster(int a, int b)
         {
             return monsterElements[a, b] == monsterElement;
+        }
+        public static bool IsMonster2(int a, int b)
+        {
+            return monsterElements2[a, b] == monsterElement;
+        }
+        public static bool IsMonster3(int a, int b)
+        {
+            return monsterElements3[a, b] == monsterElement;
         }
 
         // CHEST elements and bool
@@ -226,14 +237,14 @@ namespace RogueLikeConsoleGame
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(monsterElement);
             Console.ResetColor();
-            monsterElements[80, 18] = monsterElement;
+            monsterElements2[80, 18] = monsterElement;
 
             MonsterPositionLeft = Console.CursorLeft = 33;
             MonsterPositionTop = Console.CursorTop = 27;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(monsterElement);
             Console.ResetColor();
-            monsterElements[33, 27] = monsterElement;
+            monsterElements3[33, 27] = monsterElement;
 
             // Chest
             ChestPositionLeft = Console.CursorLeft = 71;

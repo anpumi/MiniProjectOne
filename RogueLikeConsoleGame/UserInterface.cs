@@ -11,14 +11,15 @@ namespace RogueLikeConsoleGame
         {
             for (int i = 0; i < Console.WindowWidth; i++)
             {
-                Console.Write("*");
+                Console.Write("-");
             }
             Console.WriteLine("Player name: " + Player.name);
             Console.WriteLine("HP: " + Player.healthPoints);
+            Console.WriteLine("Weapon: " + Chest.ChestLoot);
             Console.WriteLine();
             for (int i = 0; i < Console.WindowWidth; i++)
             {
-                Console.Write("*");
+                Console.Write("-");
             }
         }
     }

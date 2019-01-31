@@ -7,15 +7,26 @@ namespace RogueLikeConsoleGame
     // Annukka Puotiniemi 29/1/2019
     class Arena
     {
+        // MONSTER elements and bool
+        public const char monsterElement = 'M';
         public static int MonsterPositionTop;
         public static int MonsterPositionLeft;
+        public static int[,] monsterElements = new int[MonsterPositionLeft, MonsterPositionTop];
+        public static bool IsMonster(int a, int b)
+        {
+            return monsterElements[a, b] == monsterElement;
+        }
 
+        // CHEST elements and bool
         public static int ChestPositionTop;
         public static int ChestPositionLeft;
 
+        // EXIT elements and bool
         public static int ExitPositionTop;
         public static int ExitPositionLeft;
 
+
+        // WALL elements and bool
         public const char wallElement = '#';
 
         public static int x = Console.WindowWidth;
@@ -24,8 +35,9 @@ namespace RogueLikeConsoleGame
 
         public static bool IsWall(int x, int y)
         {
-            return wallElements[x, y] != '\0';
+            return wallElements[x, y] == wallElement;
         }
+
         //Exit();
         public static void CreateArena()
         {

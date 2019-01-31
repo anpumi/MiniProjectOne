@@ -75,12 +75,15 @@ namespace RogueLikeConsoleGame
                 // Player dies
                 if (playerA.HealthPoints <= 0)
                 {
+                    UserInterface.Text = "\t\t\t\t";
+                    UserInterface.Text2 = "\t\t\t\t";
                     dead = true;
                     EndGame.GameOver();
                 }
                 UserInterface.BuildUI();
                 Thread.Sleep(1000);
             } while (!dead);
+            monsterB.HealthPoints = 40;
             UserInterface.Text = "\t\t\t\t";
             UserInterface.Text2 = "\t\t\t\t";
             UserInterface.BuildUI();

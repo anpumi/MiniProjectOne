@@ -20,6 +20,11 @@ namespace RogueLikeConsoleGame
             Console.Write("\b");
         }
 
+        public static void PlayGame()
+        {
+            Move();
+        }
+
         public static void Move()
         {
             //Console.CursorVisible = false;

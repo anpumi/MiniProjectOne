@@ -84,11 +84,13 @@ namespace RogueLikeConsoleGame
                 if (Arena.IsMonster(NewPlayerPositionLeft,NewPlayerPositionTop))
                 {
                     Battle.GetAttackResult(killer, enemy);
+                    Arena.monsterElements[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
                 }
                 
                 if (Arena.IsChest(NewPlayerPositionLeft, NewPlayerPositionTop))
                 {
                     Chest.DropLoot();
+                    Arena.chestElements[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
                 }
 
                 if (CurrentPlayerPositionLeft == Arena.ExitPositionLeft && CurrentPlayerPositionTop == Arena.ExitPositionTop)

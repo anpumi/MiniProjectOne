@@ -20,14 +20,6 @@ namespace RogueLikeConsoleGame
         public static int defendPoints;
 
 
-
-        //private int healthPoints;
-        //private string name;
-        //private int damagePoints;
-        //private int defendPoints;
-
-
-
         public static void StartGame()
         {
 
@@ -83,14 +75,8 @@ namespace RogueLikeConsoleGame
             }
             set
             {
-                if (value.Length >= 3)
-                {
+             
                     name = value;
-                }
-                else
-                {
-                    throw new ArgumentException(string.Empty, "wrong length of name, name should be between 3-12 characters long.");
-                }
             }
         }
 
@@ -116,26 +102,20 @@ namespace RogueLikeConsoleGame
             }
             set
             {
-                if (value >= 0 && value <= 20)
-                {
-                    defendPoints = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Wrong defencepoints value, the value should be >= 0 and <= 30.");
-                }
-
+                defendPoints = value;
             }
         }
-
+                
+         
+               
+    
+            
+        
 
         public Player()
         {
 
         }
-
-   
-
 
 
         Random rnd = new Random();
@@ -151,14 +131,10 @@ namespace RogueLikeConsoleGame
             this.BodyArmor = new Armor();
         }
 
-        // Generate random attack value for Player "pellehermanni"; TÄMÄ OSIO ON VIELÄ KESKEN!
-
         public int Attack()
         {
             return rnd.Next(1, (int)damagePoints);
         }
-
-            //return rnd.Next(1, (int) damagePoints);
 
         public int Defence()
         {

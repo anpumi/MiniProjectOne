@@ -11,14 +11,14 @@ namespace RogueLikeConsoleGame
         {
             while (true)
             {
-                //if(GetAttackResult(pelaaja,monsteri)=="Game over")
+                //if (GetAttackResult(pelaaja, monsteri) == "Game over")
                 //{
                 //    Console.WriteLine("Game lost");
-                //    break;
+
                 //}
             }
 
-            
+
         }
 
 

@@ -7,7 +7,6 @@ namespace RogueLikeConsoleGame
     class Monster
     {
 
-
         public static int healthPoints;
         public static string name;
         public static int damagePoints;
@@ -89,9 +88,7 @@ namespace RogueLikeConsoleGame
 
         }
 
-
         Random rnd = new Random();
-
 
         public Monster(string name, int health, int damage, int defend)
         {
@@ -109,15 +106,10 @@ namespace RogueLikeConsoleGame
             return rnd.Next(10, (int)damagePoints);
         }
 
-
-
         public int Defence()
         {
             return defendPoints;
         }
-
-
-
 
     }
 }

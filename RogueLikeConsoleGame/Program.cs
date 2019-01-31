@@ -28,8 +28,8 @@ namespace RogueLikeConsoleGame
             //Console.WriteLine($"Healthpisteet ovat {killer.HealthPoints}");
 
             //Console.ReadLine();
-            //Console.Clear();
-            ////Battle.StartFight(killer, enemy);
+            ////Console.Clear();
+            //Battle.StartFight(killer, enemy);
             //Battle.GetAttackResult(killer, enemy);
             //Console.Clear();
             //StartGame();

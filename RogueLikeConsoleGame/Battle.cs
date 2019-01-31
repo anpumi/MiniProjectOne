@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace RogueLikeConsoleGame
 {
@@ -41,31 +42,33 @@ namespace RogueLikeConsoleGame
                 if (warIsHellB > 0)
                 {
                     monsterB.HealthPoints = monsterB.HealthPoints - warIsHellB;
-                    UserInterface.Text = "fsdafasd";
+                    UserInterface.Text = "Player dmg: " + warIsHellB + ", monster hp: " + monsterB.HealthPoints + "";
                 }
 
                 else
                 {
                     warIsHellB = 0;
-                    UserInterface.Text = "fsdafasd";
+                    UserInterface.Text = "Player dmg: " + warIsHellB + ", monster hp: " + monsterB.HealthPoints + "";
                 }
 
                 // Monster hits player
                 if (warisHellA > 0)
                 {
                     playerA.HealthPoints = playerA.HealthPoints - warisHellA;
+                    UserInterface.Text2 = "Monster dmg: " + warisHellA + ", player hp: " + playerA.HealthPoints + "";
                 }
 
                 else
                 {
                     warisHellA = 0;
+                    UserInterface.Text2 = "Monster dmg: " + warisHellA + ", player hp: " + playerA.HealthPoints + "";
                 }
 
                 // Monster dies
                 if (monsterB.HealthPoints <= 0)
                 {
-                    //Console.WriteLine("{0} has DIED and {1} is Bestofthebest\n", monsterB.Name, playerA.Name);
-                    //return "Game over";
+                    UserInterface.Text = "Monster died";
+                    UserInterface.Text2 = " ";
                     dead = true;
                 }
 
@@ -75,7 +78,12 @@ namespace RogueLikeConsoleGame
                     dead = true;
                     EndGame.GameOver();
                 }
+                UserInterface.BuildUI();
+                Thread.Sleep(1000);
             } while (!dead);
+            UserInterface.Text = "\t\t\t\t";
+            UserInterface.Text2 = "\t\t\t\t";
+            UserInterface.BuildUI();
         }
     }
 }

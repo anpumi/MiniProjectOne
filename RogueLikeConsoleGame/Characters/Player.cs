@@ -121,8 +121,8 @@ namespace RogueLikeConsoleGame
             healthPoints = health;
             damagePoints = damage;
             defendPoints = defend;
-            this.WeaponMaster = new Katana();
-            this.BodyArmor = new Armor();
+            //this.WeaponMaster = new Katana();
+            //this.BodyArmor = new Armor();
         }
 
         public int Attack()

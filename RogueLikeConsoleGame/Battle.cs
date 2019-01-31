@@ -67,7 +67,7 @@ namespace RogueLikeConsoleGame
                 // Monster dies
                 if (monsterB.HealthPoints <= 0)
                 {
-                    UserInterface.Text = "Monster died";
+                    UserInterface.Text = "Monster died" + "\t\t\t\t\t\t";
                     UserInterface.Text2 = " ";
                     dead = true;
                 }

@@ -7,9 +7,9 @@ namespace RogueLikeConsoleGame
     class UserInterface
     {
         // Annukka Puotiniemi 30.1.2019
-        public static string CurrentWeapon = "";
-        public static int CurrentWeaponDmg = 0;
-        public static string CurrentArmor = "";
+        public static string CurrentWeapon = "Dagger";
+        public static int CurrentWeaponDmg = 10;
+        public static string CurrentArmor = "None";
         public static int CurrentArmorDef = 0;
 
         public static void BuildUI()
@@ -31,23 +31,5 @@ namespace RogueLikeConsoleGame
                 Console.Write("-");
             }*/
         }
-
-        /*public static void BuildUI()
-        {
-            for (int i = 0; i < Console.WindowWidth; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("Player name: " + Player.name);
-            Console.WriteLine("HP: " + Player.healthPoints);
-            //Console.WriteLine("Weapon: " + Chest.ChestLoot);
-            Console.WriteLine($"Weapon: {CurrentWeapon}, Damage: {CurrentWeaponDmg}");
-            Console.WriteLine($"Armor: {CurrentArmor}, Defence: {CurrentArmorDef}");
-            Console.WriteLine();
-            for (int i = 0; i < Console.WindowWidth; i++)
-            {
-                Console.Write("-");
-            }
-        }*/
     }
 }

@@ -12,8 +12,8 @@ namespace RogueLikeConsoleGame
             string name1 = Console.ReadLine();
             Console.Clear();
             string name2 = "MonsteriPelle";
-            Player killer = new Player(name1, 100, 20, 10);
-            Monster enemy = new Monster(name2, 40, 40, 10);
+            Player killer = new Player(name1, 100, 10, 0);
+            Monster enemy = new Monster(name2, 40, 40, 0);
         }
     }
 }

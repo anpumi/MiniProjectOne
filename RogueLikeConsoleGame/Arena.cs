@@ -50,7 +50,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = i;
                 Console.CursorTop = 6;
                 Console.Write(wallElement);
-                wallElements[i, 6] = '#';
+                wallElements[i, 6] = wallElement;
             }
 
             // Bottom border
@@ -59,7 +59,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = i;
                 Console.CursorTop = y - 1;
                 Console.Write(wallElement);
-                wallElements[i, y-1] = '#';
+                wallElements[i, y-1] = wallElement;
             }
 
             // Left border
@@ -68,7 +68,7 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = 0;
                 Console.CursorTop = i;
                 Console.Write(wallElement);
-                wallElements[0, i] = '#';
+                wallElements[0, i] = wallElement;
             }
 
             // Right border
@@ -77,48 +77,131 @@ namespace RogueLikeConsoleGame
                 Console.CursorLeft = x - 1;
                 Console.CursorTop = i;
                 Console.Write(wallElement);
-                wallElements[x-1, i] = '#';
+                wallElements[x-1, i] = wallElement;
             }
 
             // wall1
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 15; i++)
             {
-                Console.CursorLeft = i;
-                Console.CursorTop = y - 10;
-                Console.Write("1");
-                wallElements[i, y-10] = '1';
+                Console.CursorLeft = 8;
+                Console.CursorTop = i + 6;
+                //Console.WriteLine("11");
+                Console.Write($"{wallElement}{wallElement}");
+                wallElements[8, i + 6] = wallElement;
+                wallElements[9, i + 6] = wallElement;
             }
 
-            // wall2 - jatka tästä
-            for (int i = 0; i < 6; i++)
+            // wall2
+            for (int i = 0; i < 12; i++)
             {
-                Console.CursorLeft = 50;
-                Console.CursorTop = i + 6;
-                Console.Write("2");
-                wallElements[50, i+6] = '2';
+                Console.CursorLeft = 19;
+                Console.CursorTop = i + 18;
+                //Console.WriteLine("222222");
+                Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                wallElements[19, i + 18] = wallElement;
+                wallElements[20, i + 18] = wallElement;
+                wallElements[21, i + 18] = wallElement;
+                wallElements[22, i + 18] = wallElement;
+                wallElements[23, i + 18] = wallElement;
+                wallElements[24, i + 18] = wallElement;
             }
 
             // wall3
+            for (int i = 0; i < 19; i++)
+            {
+                Console.CursorLeft = 46;
+                Console.CursorTop = i + 10;
+                //Console.WriteLine("3333333");
+                Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                wallElements[46, i + 6] = wallElement;
+                wallElements[47, i + 6] = wallElement;
+                wallElements[48, i + 6] = wallElement;
+                wallElements[49, i + 6] = wallElement;
+                wallElements[50, i+6] = wallElement;
+                wallElements[51, i+6] = wallElement;
+                wallElements[52, i+6] = wallElement;
+            }
+            // wall4
+            for (int i = 0; i < 18; i++)
+            {
+                Console.CursorLeft = 65;
+                Console.CursorTop = i + 6;
+                //Console.WriteLine("444");
+                Console.Write($"{wallElement}{wallElement}{wallElement}");
+                wallElements[65, i + 6] = wallElement;
+                wallElements[66, i + 6] = wallElement;
+                wallElements[67, i + 6] = wallElement;
+            }
+
+            // wall4
+            for (int i = 0; i < 18; i++)
+            {
+                Console.CursorLeft = 30;
+                Console.CursorTop = i + 6;
+                // Console.WriteLine("444444");
+                Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                wallElements[30, i + 6] = wallElement;
+                wallElements[31, i + 6] = wallElement;
+                wallElements[32, i + 6] = wallElement;
+                wallElements[33, i + 6] = wallElement;
+                wallElements[34, i + 6] = wallElement;
+                wallElements[35, i + 6] = wallElement;
+            }
+            // wall5
             for (int i = 0; i < 10; i++)
             {
                 Console.CursorLeft = 80;
                 Console.CursorTop = i + 20;
-                Console.Write("3");
-                wallElements[80, i+20] = '3';
+                // Console.WriteLine("5555");
+                Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}");
+                wallElements[80, i+20] = wallElement;
+                wallElements[81, i+20] = wallElement;
+                wallElements[82, i+20] = wallElement;
+                wallElements[83, i+20] = wallElement;
             }
 
-            // wall4
+            // wall5
             for (int i = 0; i < 10; i++)
             {
+                Console.CursorLeft = 78;
+                Console.CursorTop = i + 7;
+                // Console.WriteLine("55555555");
+                Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                wallElements[78, i + 7] = wallElement;
+                wallElements[79, i + 7] = wallElement;
+                wallElements[80, i + 7] = wallElement;
+                wallElements[81, i + 7] = wallElement;
+                wallElements[82, i + 7] = wallElement;
+                wallElements[83, i + 7] = wallElement;
+                wallElements[84, i + 7] = wallElement;
+                wallElements[85, i + 7] = wallElement;
+            }
+            // wall6
+            for (int i = 0; i < 18; i++)
+            {
                 Console.CursorLeft = 100;
-                Console.CursorTop = i + 10;
-                Console.Write("4");
-                wallElements[100, i+10] = '4';
+                Console.CursorTop = i + 7;
+                //Console.WriteLine("666666");
+                Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                wallElements[100, i+7] = wallElement;
+                wallElements[101, i+7] = wallElement;
+                wallElements[102, i+7] = wallElement;
+                wallElements[103, i+7] = wallElement;
+                wallElements[104, i+7] = wallElement;
+                wallElements[105, i+7] = wallElement;
             }
 
             // Monster
             MonsterPositionLeft = Console.CursorLeft = 60;
             MonsterPositionTop = Console.CursorTop = 10;
+            Console.Write(monsterElement);
+
+            MonsterPositionLeft = Console.CursorLeft = 80;
+            MonsterPositionTop = Console.CursorTop = 18;
+            Console.Write(monsterElement);
+
+            MonsterPositionLeft = Console.CursorLeft = 33;
+            MonsterPositionTop = Console.CursorTop = 27;
             Console.Write(monsterElement);
 
             //MonsterPositionLeft = Console.CursorLeft = 60;
@@ -138,8 +221,8 @@ namespace RogueLikeConsoleGame
             //Console.Write(monsterElement);
 
             // Chest
-            ChestPositionLeft = Console.CursorLeft = 20;
-            ChestPositionTop = Console.CursorTop = 18;
+            ChestPositionLeft = Console.CursorLeft = 71;
+            ChestPositionTop = Console.CursorTop = 7;
             Console.Write("C");
 
             // Exit

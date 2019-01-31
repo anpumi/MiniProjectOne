@@ -28,9 +28,6 @@ namespace RogueLikeConsoleGame
         }
 
 
-
-
-
         public Armor()
         {
             this.ArmorDefence = 20;

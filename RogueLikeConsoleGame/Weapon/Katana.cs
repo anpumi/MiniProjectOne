@@ -27,15 +27,10 @@ namespace RogueLikeConsoleGame
                 }
             }
         }
-
         public Katana()
         {
-
             this.Damage = 10;
         }
-
-
     }
 }
-        //public static string WeaponName; 
-        //public static int Damage;
+      

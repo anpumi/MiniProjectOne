@@ -11,7 +11,7 @@ namespace RogueLikeConsoleGame
         public const char monsterElement = 'M';
         public static int MonsterPositionTop;
         public static int MonsterPositionLeft;
-        public static int[,] monsterElements = new int[MonsterPositionLeft, MonsterPositionTop];
+        public static int[,] monsterElements = new int[Console.WindowWidth, Console.WindowHeight];
         public static bool IsMonster(int a, int b)
         {
             return monsterElements[a, b] == monsterElement;
@@ -194,15 +194,24 @@ namespace RogueLikeConsoleGame
             // Monster
             MonsterPositionLeft = Console.CursorLeft = 60;
             MonsterPositionTop = Console.CursorTop = 10;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(monsterElement);
+            Console.ResetColor();
+            monsterElements[60, 10] = monsterElement;
 
             MonsterPositionLeft = Console.CursorLeft = 80;
             MonsterPositionTop = Console.CursorTop = 18;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(monsterElement);
+            Console.ResetColor();
+            monsterElements[80, 18] = monsterElement;
 
             MonsterPositionLeft = Console.CursorLeft = 33;
             MonsterPositionTop = Console.CursorTop = 27;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(monsterElement);
+            Console.ResetColor();
+            monsterElements[33, 27] = monsterElement;
 
             //MonsterPositionLeft = Console.CursorLeft = 60;
             //MonsterPositionTop = Console.CursorTop = 10;
@@ -223,13 +232,16 @@ namespace RogueLikeConsoleGame
             // Chest
             ChestPositionLeft = Console.CursorLeft = 71;
             ChestPositionTop = Console.CursorTop = 7;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("C");
+            Console.ResetColor();
 
             // Exit
             ExitPositionLeft = Console.CursorLeft = 3;
             ExitPositionTop = Console.CursorTop = 27;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("%");
-
+            Console.ResetColor();
 
         }
         public static void DumpArena()

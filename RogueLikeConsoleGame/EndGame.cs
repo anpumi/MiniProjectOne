@@ -22,6 +22,10 @@ namespace RogueLikeConsoleGame
 
             if (input == "YES")
             {
+                UserInterface.CurrentWeapon = "Dagger";
+                UserInterface.CurrentWeaponDmg = 10;
+                UserInterface.CurrentArmor = "None";
+                UserInterface.CurrentArmorDef = 0;
                 Console.Clear();
                 Program.Main();
             }
@@ -46,6 +50,10 @@ namespace RogueLikeConsoleGame
 
             if (input == "YES")
             {
+                UserInterface.CurrentWeapon = "Dagger";
+                UserInterface.CurrentWeaponDmg = 10;
+                UserInterface.CurrentArmor = "None";
+                UserInterface.CurrentArmorDef = 0;
                 Console.Clear();
                 Program.Main();
             }

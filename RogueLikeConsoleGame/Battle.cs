@@ -55,19 +55,19 @@ namespace RogueLikeConsoleGame
                 if (warisHellA > 0)
                 {
                     playerA.HealthPoints = playerA.HealthPoints - warisHellA;
-                    UserInterface.Text2 = "Monster dmg: " + warisHellA + ", player hp: " + playerA.HealthPoints + "";
+                    UserInterface.Text2 = "|| Monster dmg: " + warisHellA + ", player hp: " + playerA.HealthPoints + "";
                 }
 
                 else
                 {
                     warisHellA = 0;
-                    UserInterface.Text2 = "Monster dmg: " + warisHellA + ", player hp: " + playerA.HealthPoints + "";
+                    UserInterface.Text2 = "|| Monster dmg: " + warisHellA + ", player hp: " + playerA.HealthPoints + "";
                 }
 
                 // Monster dies
                 if (monsterB.HealthPoints <= 0)
                 {
-                    UserInterface.Text = "Monster died" + "\t\t\t\t\t\t";
+                    UserInterface.Text = "Monster died" + "\t\t\t\t\t\t\t";
                     UserInterface.Text2 = " ";
                     dead = true;
                 }

@@ -29,7 +29,7 @@ namespace RogueLikeConsoleGame
 
         public static void Move()
         {
-            Monster enemy = new Monster(40, 25, 0);
+            Monster enemy = new Monster(40, 20, 0);
             //Monster enemy2 = new Monster(40, 10, 0);
             //Monster enemy3 = new Monster(40, 10, 0);
             //Console.CursorVisible = false;

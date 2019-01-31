@@ -10,7 +10,6 @@ namespace RogueLikeConsoleGame
 {
     public class Player
     {
-
         private Armor bodyArmor;
         private Katana weaponMaster;
 
@@ -19,10 +18,8 @@ namespace RogueLikeConsoleGame
         public static int damagePoints;
         public static int defendPoints;
 
-
         public static void StartGame()
         {
-
 
         }
 
@@ -61,7 +58,6 @@ namespace RogueLikeConsoleGame
             {
                 {
                     healthPoints = value;
-           
                 }
 
             }
@@ -75,11 +71,9 @@ namespace RogueLikeConsoleGame
             }
             set
             {
-             
-                    name = value;
+                name = value;
             }
         }
-
 
         public int DamagePoints
         {
@@ -89,7 +83,7 @@ namespace RogueLikeConsoleGame
             }
             set
             {
-            damagePoints = value;
+                damagePoints = value;
 
             }
         }
@@ -105,24 +99,16 @@ namespace RogueLikeConsoleGame
                 defendPoints = value;
             }
         }
-                
-         
-               
-    
-            
-        
 
         public Player()
         {
 
         }
 
-
         Random rnd = new Random();
 
-        public Player(string name, int health ,int damage, int defend)
+        public Player(string name, int health, int damage, int defend)
         {
-
             Name = name;
             healthPoints = health;
             damagePoints = damage;
@@ -140,10 +126,9 @@ namespace RogueLikeConsoleGame
         {
             return defendPoints;
         }
-
     }
 }
-        
+
 
 
 

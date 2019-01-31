@@ -10,6 +10,7 @@ namespace RogueLikeConsoleGame
         
         public static void Exit()
         {
+            Console.Clear();
             Console.WriteLine("Good shit bro, you win!");
             Console.WriteLine();
 
@@ -21,7 +22,8 @@ namespace RogueLikeConsoleGame
 
             if (input == "YES")
             {
-                //Program.Main();
+                Console.Clear();
+                Program.Main();
             }
 
             if (input == "NO")
@@ -32,6 +34,7 @@ namespace RogueLikeConsoleGame
 
         public static void GameOver()
         {
+            Console.Clear();
             Console.WriteLine("YOU DIED");
             Console.WriteLine();
 
@@ -43,7 +46,8 @@ namespace RogueLikeConsoleGame
 
             if (input == "YES")
             {
-                //Program.Main();
+                Console.Clear();
+                Program.Main();
             }
 
             if (input == "NO")

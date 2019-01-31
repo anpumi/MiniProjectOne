@@ -237,14 +237,16 @@ namespace RogueLikeConsoleGame
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(monsterElement);
             Console.ResetColor();
-            monsterElements2[80, 18] = monsterElement;
+            monsterElements[80, 18] = monsterElement;
+            //monsterElements2[80, 18] = monsterElement;
 
             MonsterPositionLeft = Console.CursorLeft = 33;
             MonsterPositionTop = Console.CursorTop = 27;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(monsterElement);
             Console.ResetColor();
-            monsterElements3[33, 27] = monsterElement;
+            monsterElements[33, 27] = monsterElement;
+            //monsterElements3[33, 27] = monsterElement;
 
             // Chest
             ChestPositionLeft = Console.CursorLeft = 71;

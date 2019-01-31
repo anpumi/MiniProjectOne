@@ -29,9 +29,9 @@ namespace RogueLikeConsoleGame
 
         public static void Move()
         {
-            Monster enemy = new Monster(40, 10, 0);
-            Monster enemy2 = new Monster(40, 10, 0);
-            Monster enemy3 = new Monster(40, 10, 0);
+            Monster enemy = new Monster(40, 25, 0);
+            //Monster enemy2 = new Monster(40, 10, 0);
+            //Monster enemy3 = new Monster(40, 10, 0);
             //Console.CursorVisible = false;
             Arena.CreateArena();
             StartPosition();
@@ -89,17 +89,17 @@ namespace RogueLikeConsoleGame
                     Arena.monsterElements[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
                 }
 
-                if (Arena.IsMonster2(NewPlayerPositionLeft, NewPlayerPositionTop))
-                {
-                    Battle.GetAttackResult(killer, enemy2);
-                    Arena.monsterElements2[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
-                }
+                //if (Arena.IsMonster2(NewPlayerPositionLeft, NewPlayerPositionTop))
+                //{
+                //    Battle.GetAttackResult(killer, enemy2);
+                //    Arena.monsterElements2[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
+                //}
 
-                if (Arena.IsMonster3(NewPlayerPositionLeft, NewPlayerPositionTop))
-                {
-                    Battle.GetAttackResult(killer, enemy3);
-                    Arena.monsterElements3[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
-                }
+                //if (Arena.IsMonster3(NewPlayerPositionLeft, NewPlayerPositionTop))
+                //{
+                //    Battle.GetAttackResult(killer, enemy3);
+                //    Arena.monsterElements3[NewPlayerPositionLeft, NewPlayerPositionTop] = '\0';
+                //}
 
                 if (Arena.IsChest(NewPlayerPositionLeft, NewPlayerPositionTop))
                 {

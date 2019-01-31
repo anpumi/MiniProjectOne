@@ -6,7 +6,7 @@ namespace RogueLikeConsoleGame
 {
     class StartGame // Asko Pakkala / Timo Lehtikallio
     {
-        public static void Start()
+        public static Player Start()
         {
             for (int i = 0; i < Console.WindowWidth; i++)
             {
@@ -37,7 +37,8 @@ namespace RogueLikeConsoleGame
             Console.Clear();
             //string name2 = "MonsteriPelle";
             Player killer = new Player(name1, 100, 10, 0);
-            Monster enemy = new Monster(40, 40, 0);
+            
+            return killer;
         }
     }
 }

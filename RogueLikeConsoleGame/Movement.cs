@@ -12,6 +12,7 @@ namespace RogueLikeConsoleGame
         public static int NewPlayerPositionLeft;
         public static int OldPlayerPositionTop;
         public static int OldPlayerPositionLeft;
+        private static Player killer;
         public static void StartPosition()
         {
             CurrentPlayerPositionTop = Console.CursorTop = 10;
@@ -20,13 +21,15 @@ namespace RogueLikeConsoleGame
             Console.Write("\b");
         }
 
-        public static void PlayGame()
+        public static void PlayGame(Player killer)
         {
+            Movement.killer = killer;
             Move();
         }
 
         public static void Move()
         {
+            Monster enemy = new Monster(40, 40, 0);
             //Console.CursorVisible = false;
             Arena.CreateArena();
             StartPosition();
@@ -78,12 +81,15 @@ namespace RogueLikeConsoleGame
                     Console.Write("\b");
                 }
 
-                if (CurrentPlayerPositionLeft == Arena.MonsterPositionLeft && CurrentPlayerPositionTop == Arena.MonsterPositionTop)
+                if (Arena.IsMonster(NewPlayerPositionLeft,NewPlayerPositionTop))
                 {
                     //Battle.StartFight(killer, enemy);
-                    //Console.WriteLine("Wololoo!");
-                    //Player.Attack();
                 }
+
+                //if (CurrentPlayerPositionLeft == Arena.MonsterPositionLeft && CurrentPlayerPositionTop == Arena.MonsterPositionTop)
+                //{
+                //    Battle.GetAttackResult(killer, enemy);
+                //}
                 if (CurrentPlayerPositionLeft == Arena.ChestPositionLeft && CurrentPlayerPositionTop == Arena.ChestPositionTop)
                 {
                     Chest.DropLoot();

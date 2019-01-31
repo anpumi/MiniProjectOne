@@ -7,8 +7,8 @@ namespace RogueLikeConsoleGame
     {
         public static void Main()
         {
-            StartGame.Start();
-            Movement.PlayGame();
+            Player killer = StartGame.Start();
+            Movement.PlayGame(killer);
             
             //Battle.StartFight(killer, enemy);
             //Battle.GetAttackResult(killer, enemy);

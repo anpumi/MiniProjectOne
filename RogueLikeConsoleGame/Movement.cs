@@ -29,7 +29,7 @@ namespace RogueLikeConsoleGame
 
         public static void Move()
         {
-            Monster enemy = new Monster(40, 40, 0);
+            Monster enemy = new Monster(40, 10, 0);
             //Console.CursorVisible = false;
             Arena.CreateArena();
             StartPosition();
@@ -86,7 +86,7 @@ namespace RogueLikeConsoleGame
                     Battle.GetAttackResult(killer, enemy);
                 }
                 
-                if (CurrentPlayerPositionLeft == Arena.ChestPositionLeft && CurrentPlayerPositionTop == Arena.ChestPositionTop)
+                if (Arena.IsChest(NewPlayerPositionLeft, NewPlayerPositionTop))
                 {
                     Chest.DropLoot();
                 }

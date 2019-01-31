@@ -18,8 +18,14 @@ namespace RogueLikeConsoleGame
         }
 
         // CHEST elements and bool
+        public const char chestElement = 'C';
         public static int ChestPositionTop;
         public static int ChestPositionLeft;
+        public static int[,] chestElements = new int[Console.WindowWidth, Console.WindowHeight];
+        public static bool IsChest(int a, int b)
+        {
+            return chestElements[a, b] == chestElement;
+        }
 
         // EXIT elements and bool
         public static int ExitPositionTop;
@@ -49,7 +55,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = i;
                 Console.CursorTop = 6;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(wallElement);
+                Console.ResetColor();
                 wallElements[i, 6] = wallElement;
             }
 
@@ -58,7 +66,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = i;
                 Console.CursorTop = y - 1;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(wallElement);
+                Console.ResetColor();
                 wallElements[i, y-1] = wallElement;
             }
 
@@ -67,7 +77,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 0;
                 Console.CursorTop = i;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(wallElement);
+                Console.ResetColor();
                 wallElements[0, i] = wallElement;
             }
 
@@ -76,7 +88,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = x - 1;
                 Console.CursorTop = i;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(wallElement);
+                Console.ResetColor();
                 wallElements[x-1, i] = wallElement;
             }
 
@@ -85,8 +99,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 8;
                 Console.CursorTop = i + 6;
-                //Console.WriteLine("11");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[8, i + 6] = wallElement;
                 wallElements[9, i + 6] = wallElement;
             }
@@ -96,8 +111,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 19;
                 Console.CursorTop = i + 18;
-                //Console.WriteLine("222222");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[19, i + 18] = wallElement;
                 wallElements[20, i + 18] = wallElement;
                 wallElements[21, i + 18] = wallElement;
@@ -111,8 +127,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 46;
                 Console.CursorTop = i + 10;
-                //Console.WriteLine("3333333");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[46, i + 10] = wallElement;
                 wallElements[47, i + 10] = wallElement;
                 wallElements[48, i + 10] = wallElement;
@@ -126,8 +143,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 65;
                 Console.CursorTop = i + 6;
-                //Console.WriteLine("444");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[65, i + 6] = wallElement;
                 wallElements[66, i + 6] = wallElement;
                 wallElements[67, i + 6] = wallElement;
@@ -138,8 +156,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 30;
                 Console.CursorTop = i + 6;
-                // Console.WriteLine("444444");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[30, i + 6] = wallElement;
                 wallElements[31, i + 6] = wallElement;
                 wallElements[32, i + 6] = wallElement;
@@ -152,8 +171,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 80;
                 Console.CursorTop = i + 20;
-                // Console.WriteLine("5555");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[80, i+20] = wallElement;
                 wallElements[81, i+20] = wallElement;
                 wallElements[82, i+20] = wallElement;
@@ -165,8 +185,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 78;
                 Console.CursorTop = i + 7;
-                // Console.WriteLine("55555555");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[78, i + 7] = wallElement;
                 wallElements[79, i + 7] = wallElement;
                 wallElements[80, i + 7] = wallElement;
@@ -181,8 +202,9 @@ namespace RogueLikeConsoleGame
             {
                 Console.CursorLeft = 100;
                 Console.CursorTop = i + 7;
-                //Console.WriteLine("666666");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write($"{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}{wallElement}");
+                Console.ResetColor();
                 wallElements[100, i+7] = wallElement;
                 wallElements[101, i+7] = wallElement;
                 wallElements[102, i+7] = wallElement;
@@ -213,28 +235,20 @@ namespace RogueLikeConsoleGame
             Console.ResetColor();
             monsterElements[33, 27] = monsterElement;
 
-            //MonsterPositionLeft = Console.CursorLeft = 60;
-            //MonsterPositionTop = Console.CursorTop = 10;
-            //Console.Write(monsterElement);
-
-            //MonsterPositionLeft = Console.CursorLeft = 160;
-            //MonsterPositionTop = Console.CursorTop = 10;
-            //Console.Write(monsterElement);
-
-            //MonsterPositionLeft = Console.CursorLeft = 60;
-            //MonsterPositionTop = Console.CursorTop = 10;
-            //Console.Write(monsterElement);
-
-            //MonsterPositionLeft = Console.CursorLeft = 60;
-            //MonsterPositionTop = Console.CursorTop = 10;
-            //Console.Write(monsterElement);
-
             // Chest
             ChestPositionLeft = Console.CursorLeft = 71;
             ChestPositionTop = Console.CursorTop = 7;
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("C");
+            Console.Write(chestElement);
             Console.ResetColor();
+            chestElements[71, 7] = chestElement;
+
+            ChestPositionLeft = Console.CursorLeft = 26;
+            ChestPositionTop = Console.CursorTop = 28;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(chestElement);
+            Console.ResetColor();
+            chestElements[26, 28] = chestElement;
 
             // Exit
             ExitPositionLeft = Console.CursorLeft = 3;

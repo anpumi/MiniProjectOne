@@ -6,64 +6,102 @@ namespace RogueLikeConsoleGame
 {
     class Chest // Timo Lehtikallio
     {
-        //Open();
-        //DropLoot();
-
-        public static string[] ChestLoot = new string[] { "Mace", "LongSword", "BattleAxe", "RingMail", "ScaleMail", "PlateMail", "HealthPotion" };
+        public static string[] ChestLoot = new string[] { "Mace", "Long Sword", "Battle Axe", "Ring Mail", "Scale Mail", "Plate Mail", "Health Potion" };
 
         public static void DropLoot()
         {
             Random randomLoot = new Random();
             int loot = randomLoot.Next(0, 6);
-            //Console.WriteLine(ChestLoot[6]);
-            //Console.WriteLine(ChestLoot.Length);
-            //Console.WriteLine(loot);
-            switch (loot)
+            switch (loot) // Player damage or defence or health rises
             {
-                case 0:
-                    Console.Write("Player damage = 10");
-                    // If player damage > 10 -> hp+5
-                    // Else player damage = 20
+                case 0: // Player damage = 20
+                    if (Player.damagePoints > 20)
+                    {
+                        Player.healthPoints += 10;
+                    }
+                    else
+                    {
+                        Player.damagePoints = 20;
+                        UserInterface.CurrentWeapon = ChestLoot[0];
+                        UserInterface.CurrentWeaponDmg = 20;
+                        UserInterface.BuildUI();
+                    }
                     break;
-                case 1:
-                    Console.Write("Player damage = 15");
-                    // If player damage > 15 -> hp+5
-                    // Else player damage = 20
-                    break;
-                case 2:
-                    Console.Write("Player damage = 20");
-                    // If player damage > 20 -> hp+5
-                    // Else player damage = 20
-                    break;
-                case 3:
-                    Console.Write("Player defence = 10");
-                    // If player armor > 10 -> hp+5
-                    // Else player armor = 10
-                    break;
-                case 4:
-                    Console.Write("Player defence = 15");
-                    // If player armor > 15 -> hp+5
-                    // Else player armor = 15
-                    break;
-                case 5:
-                    Console.Write("Player defence = 20");
-                    // If player armor > 20 -> hp+5
-                    // Else player armor = 20
-                    break;
-                case 6:
-                    Console.Write("HelaaPRKL");
-                    break;
-                //case 7:
-                //    Console.Write("HelaaPRKL");
-                //    break;
-            }
 
-            
-            //if (loot == 7)
-            //{
-            //    // Player health + 30
-            //    Console.Write("HelaaPRKL");
-            //}
+                case 1: // Player damage = 30
+                    if (Player.damagePoints > 30)
+                    {
+                        Player.healthPoints += 10;
+                    }
+                    else
+                    {
+                        Player.damagePoints = 30;
+                        UserInterface.CurrentWeapon = ChestLoot[1];
+                        UserInterface.CurrentWeaponDmg = 30;
+                        UserInterface.BuildUI();
+                    }
+                    break;
+
+                case 2: // Player damage = 40
+                    if (Player.damagePoints > 40)
+                    {
+                        Player.healthPoints += 10;
+                    }
+                    else
+                    {
+                        Player.damagePoints = 40;
+                        UserInterface.CurrentWeapon = ChestLoot[2];
+                        UserInterface.CurrentWeaponDmg = 40;
+                        UserInterface.BuildUI();
+                    }
+                    break;
+
+                case 3: // Player defence = 10
+                    if (Player.defendPoints > 10)
+                    {
+                        Player.healthPoints += 10;
+                    }
+                    else
+                    {
+                        Player.defendPoints = 10;
+                        UserInterface.CurrentArmor = ChestLoot[3];
+                        UserInterface.CurrentArmorDef = 10;
+                        UserInterface.BuildUI();
+                    }
+                    break;
+
+                case 4: // Player defence = 15
+                    if (Player.defendPoints > 15)
+                    {
+                        Player.healthPoints += 10;
+                    }
+                    else
+                    {
+                        Player.defendPoints = 15;
+                        UserInterface.CurrentArmor = ChestLoot[4];
+                        UserInterface.CurrentArmorDef = 15;
+                        UserInterface.BuildUI();
+                    }
+                    break;
+
+                case 5: // Player defence = 20
+                    if (Player.defendPoints > 20)
+                    {
+                        Player.healthPoints += 10;
+                    }
+                    else
+                    {
+                        Player.defendPoints = 20;
+                        UserInterface.CurrentArmor = ChestLoot[5];
+                        UserInterface.CurrentArmorDef = 20;
+                        UserInterface.BuildUI();
+                    }
+                    break;
+
+                case 6: // Player health + 40
+                    Player.healthPoints += 40;
+                    break;
+            }
         }
     }
 }
